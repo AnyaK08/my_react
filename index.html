@@ -14,11 +14,19 @@
    <script type="text/babel">
     const rootNode = document.getElementById("app");    // элемент для рендеринга приложения React
     // получаем корневой элемент 
-    const root = ReactDOM.createRoot(rootNode);
+    // const root = ReactDOM.createRoot(rootNode);
+    const root = ReactDOM.createRoot(document.getElementById("app"));
     // рендеринг в корневой элемент
     root.render(
-        <h1>Hello React</h1>  // элемент, который мы хотим создать
+        <div>
+            <h1>Hello React{2 + 2}</h1>, 
+            <h1>Hello React</h1>, 
+            <h1>Hello React</h1>,
+        </div>
+     
+    
      );
+   
    </script>
 </body>
 </html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>METANIT.COM</title>
+</head>
+<body>
+    <div id="app"></div>
+        
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        // создаем компонент 
+      function Hello(props) {
+          return <div>
+              <p>Имя: {props.name}</p>
+              <p>Возраст: {props.age}</p>
+          </div>;
+        }
+       
+        
+        const rootEl = ReactDOM.createRoot(
+            document.getElementById("app")
+        );
+
+        //использование компонента Hello(<Hello />)
+        rootEl.render(
+            <div> 
+                <Hello name="Tom" age="31" /> 
+                <Hello name="Mike" age="16" /> 
+                <Hello name="Alina" age="9" /> 
+            </div>
+            )
+
+    </script>
+    <script>
+        let user = {
+            name: "Tom", 
+            age: "37",
+            surname: "Smith",
+            work: function(){
+                console.log(`${this.name} is working`)
+            },
+            sleep: function(){
+                console.log(`${this.name} is sleeping`)
+            }
+        }
+    </script>
+</body>
+</html>
