@@ -10,13 +10,13 @@ function App() {
   //   console.log("ro");
   // }
   // let lngForVerbs = "en";
-  const [lngForVerbs, setLngForVerbs] = useState("en");
+  const [lngForVerbs, setLngForVerbs] = useState("ru");
 
   function chooseLng(lng) {
-    console.log(lng);
+    // console.log(lng);
     // lngForVerbs = lng;
     setLngForVerbs(lng);
-    console.log(lngForVerbs);
+    // console.log(lngForVerbs);
   }
 
   return (
