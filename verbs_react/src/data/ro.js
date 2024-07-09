@@ -1,4 +1,4 @@
-
+//@TODO add structure
 
 var roData = {
   pronouns: ["Eu", "Tu", "El/Ea", "Noi", "Voi", "Ei/Ele"],

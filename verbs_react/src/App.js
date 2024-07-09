@@ -2,6 +2,9 @@ import "./App.css";
 import Verbs from "./components/verbs/Verbs";
 import { useState } from "react";
 
+export const EN = "english";
+export const RO = "romanian";
+
 function App() {
   // function chooseEn() {
   //   console.log("en");
@@ -23,7 +26,7 @@ function App() {
     <div className="App container text-center">
       <h1>Choose the language</h1>
       <button
-        id="en"
+        id={EN}
         // onClick={chooseEn}
         // onClick={chooseLng("en")}
         // onClick={
@@ -31,15 +34,15 @@ function App() {
         //     chooseLng("en");
         //   }
         // }
-        onClick={() => chooseLng("en")}
+        onClick={() => chooseLng(EN)}
         type="button"
         className="btn btn-success btn-lg js-lng"
       >
         English
       </button>
       <button
-        id="ro"
-        onClick={() => chooseLng("ro")}
+        id={RO}
+        onClick={() => chooseLng(RO)}
         type="button"
         className="btn btn-success btn-lg js-lng"
       >
