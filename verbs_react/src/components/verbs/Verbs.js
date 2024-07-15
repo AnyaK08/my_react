@@ -2,16 +2,18 @@ import "./Verbs.css";
 import engData from "../../data/en";
 import roData from "../../data/ro";
 import { EN, RO } from "../../App";
+import AllVerbs from "../all-verbs/AllVerbs";
+
+
 
 function Verbs(props) {
-  console.log(EN);
-  console.log(RO);
-  let lngData;
+
+  let lngData = engData;
   if (props.lng === EN) {
-    console.log(engData);
+    // console.log(engData);
     lngData = engData;
   } else if (props.lng === RO) {
-    console.log(roData);
+    // console.log(roData);
     lngData = roData;
   } else {
     console.warn("unknown language");
@@ -24,11 +26,12 @@ function Verbs(props) {
 
   return (
     <div id="verbs" className="mt-3">
-      component verbs <br />
+      <AllVerbs verbs={ lngData?.verbs} />
+      <br/>
       {props.lng}
       {
         //    (() => console.log("from jsx"))()
-        (() => console.log(lngData))()
+        // (() => console.log(lngData))()
       }
     </div>
   );
