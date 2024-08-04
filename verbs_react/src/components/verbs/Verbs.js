@@ -2,13 +2,10 @@ import "./Verbs.css";
 import engData from "../../data/en";
 import roData from "../../data/ro";
 import { EN, RO } from "../../App";
-import AllVerbs from "../all-verbs/AllVerbs";
-
-
+import AllLngVerbs from "../all-lng-verbs/AllLngVerbs";
 
 function Verbs(props) {
-
-  let lngData = engData;
+  let lngData = [];
   if (props.lng === EN) {
     // console.log(engData);
     lngData = engData;
@@ -26,12 +23,12 @@ function Verbs(props) {
 
   return (
     <div id="verbs" className="mt-3">
-      <AllVerbs verbs={ lngData?.verbs} />
-      <br/>
+      <AllLngVerbs verbs={lngData?.verbs} />
+      <br />
       {props.lng}
       {
         //    (() => console.log("from jsx"))()
-        // (() => console.log(lngData))()
+        (() => console.log(lngData))()
       }
     </div>
   );
