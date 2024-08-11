@@ -44,7 +44,7 @@ function App() {
         id={RO}
         onClick={() => chooseLng(RO)}
         type="button"
-        className="btn btn-success btn-lg js-lng"
+        className="btn btn-success btn-lg js-lng m-2"
       >
         Romanian
       </button>

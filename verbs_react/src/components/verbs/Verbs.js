@@ -3,9 +3,13 @@ import engData from "../../data/en";
 import roData from "../../data/ro";
 import { EN, RO } from "../../App";
 import AllLngVerbs from "../all-lng-verbs/AllLngVerbs";
+import { useState } from "react";
 
 function Verbs(props) {
   let lngData = [];
+  const [searchVerb, setSearchVerb] = useState("");
+  
+
   if (props.lng === EN) {
     // console.log(engData);
     lngData = engData;
@@ -23,12 +27,16 @@ function Verbs(props) {
 
   return (
     <div id="verbs" className="mt-3">
-      <AllLngVerbs verbs={lngData?.verbs} />
+      <AllLngVerbs verbs={lngData?.verbs} selectVerb={setSearchVerb} />
       <br />
-      {props.lng}
+
+      {lngData?.verbs?.find((v) => v.verb === searchVerb)?.verb}
+      {/* @TODO create new component for verb detail  */}
       {
+
         //    (() => console.log("from jsx"))()
-        (() => console.log(lngData))()
+        (() =>
+          console.log(lngData?.verbs?.find((v) => v.verb === searchVerb)))()
       }
     </div>
   );
