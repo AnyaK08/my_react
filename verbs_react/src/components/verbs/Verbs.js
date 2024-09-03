@@ -4,6 +4,7 @@ import roData from "../../data/ro";
 import { EN, RO } from "../../App";
 import AllLngVerbs from "../all-lng-verbs/AllLngVerbs";
 import { useState } from "react";
+import  DetailView  from "../detail-view/DetailView";
 
 function Verbs(props) {
   let lngData = [];
@@ -29,15 +30,18 @@ function Verbs(props) {
     <div id="verbs" className="mt-3">
       <AllLngVerbs verbs={lngData?.verbs} selectVerb={setSearchVerb} />
       <br />
-
-      {lngData?.verbs?.find((v) => v.verb === searchVerb)?.verb}
+      {/* {lngData?.verbs?.find((v) => v.verb === searchVerb)?.verb} */}
+      <h2>{searchVerb}</h2>
       {/* @TODO create new component for verb detail  */}
-      {
-
+      <DetailView
+        pronouns={lngData?.pronouns}
+        verb={lngData?.verbs?.find((v) => v.verb === searchVerb)}
+      />
+      {/* {
         //    (() => console.log("from jsx"))()
-        (() =>
-          console.log(lngData?.verbs?.find((v) => v.verb === searchVerb)))()
-      }
+        // (() =>
+          console.log()))()
+      } */}
     </div>
   );
 }

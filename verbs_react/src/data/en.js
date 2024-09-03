@@ -11,7 +11,7 @@ var engData = {
     },
     {
       verb: "be - быть",
-      forms: ["am", "are", "are", "is", "are", "are"],
+      forms: ["am", "are", "is", "are", "are", "are"],
     },
     
   ],
